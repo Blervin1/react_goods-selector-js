@@ -19,11 +19,7 @@ export const App = () => {
   const [selectedGood, setSelectedGood] = useState('Jam');
 
   const handleClick = good => {
-    if (selectedGood === good) {
-      setSelectedGood(''); // remove
-    } else {
-      setSelectedGood(good); // new product
-    }
+setSelectedGood(selectedGood === good ? '' : good)
   };
 
   return (
